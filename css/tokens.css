@@ -1,0 +1,50 @@
+/* Токени дизайн-системи «Сайт музею» (tokens.json, v2) */
+:root {
+  /* Кольори */
+  --museum-blue: #42578c;
+  --museum-blue-deep: #2a3859;
+  --blue-soft: #e6eaf3;
+  --blue-soft-pressed: #d5dcea;
+  --cta-yellow: #fae530;
+  --cta-yellow-hover: #fff27a;
+  --cta-yellow-pressed: #e5cf12;
+  --ink: #1f2637;
+  --ink-muted: #525a66;
+  --paper: #f6f5f0;
+  --white: #ffffff;
+  --museum-grey: #787f81;
+  --danger: #8a1c1c;
+  --focus-ring: var(--museum-blue);
+
+  /* Шрифти */
+  --font-display: Rubik, "Segoe UI", Arial, sans-serif;
+  --font-body: Literata, Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  /* Відступи */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* Радіуси */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+
+  /* Тіні */
+  --shadow-btn-hover: 0 6px 14px rgba(31, 38, 55, 0.28);
+  --shadow-btn-secondary-hover: 0 6px 14px rgba(31, 38, 55, 0.16);
+  --shadow-card: 0 2px 8px rgba(31, 38, 55, 0.08);
+  --shadow-card-hover: 0 10px 24px rgba(31, 38, 55, 0.16);
+  --shadow-hero-card: 0 10px 28px rgba(10, 14, 30, 0.25);
+  --shadow-call: 0 6px 16px rgba(10, 14, 30, 0.35);
+
+  /* Рух */
+  --motion: 150ms;
+}

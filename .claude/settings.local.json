@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(if \\(\\(Get-ChildItem en -Force | Measure-Object\\).Count -eq 0\\) { Remove-Item en }; \\(Get-Item index.html\\).FullName)",
+      "PowerShell(\\(Get-Command python,py,node,npx -ErrorAction SilentlyContinue | Select Name,Source\\) | Format-Table -AutoSize | Out-String)",
+      "PowerShell(python --version)"
+    ]
+  }
+}

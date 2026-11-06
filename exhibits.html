@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Експонати — Software and Computer Museum</title>
+  <meta name="description" content="Шість експонатів Software and Computer Museum: MessagePad, Magnavox Odyssey, Apple II GS, Apple QuickTake 100, Commodore Amiga 600 і Nintendo Famicom.">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Literata:opsz,wght@7..72,400;7..72,600&family=Rubik:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">Перейти до вмісту</a>
+
+  <header class="site-header on-blue">
+    <div class="container">
+      <a class="logo-link" href="index.html"><img class="logo" src="images/logo.png" alt="Software and Computer Museum — на головну" width="47" height="64"></a>
+      <nav class="site-nav" aria-label="Розділи сайту">
+        <a href="index.html#excursions">Екскурсії</a>
+        <a href="exhibits.html" aria-current="page">Експонати</a>
+        <a href="courses.html">Курси</a>
+        <a href="index.html#contacts">Відвідування</a>
+      </nav>
+      <div class="header-tools">
+        <div class="lang" role="group" aria-label="Мова сайту">
+          <button type="button" aria-pressed="true" aria-label="Українська">UA</button>
+          <button type="button" aria-pressed="false" aria-label="English" lang="en">EN</button>
+        </div>
+        <a class="header-phone" href="tel:+380675394095" aria-label="Зателефонувати: 067 539 4095">067&nbsp;539&nbsp;4095</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero on-blue" aria-labelledby="exhibits-title">
+      <div class="container">
+        <div class="hero-text">
+          <h1 id="exhibits-title">Експонати</h1>
+          <p class="hero-lead">Шість пристроїв із колекції музею: кишеньковий комп’ютер, ігрові консолі, домашні комп’ютери й цифрова фотокамера.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="list-title">
+      <div class="container">
+        <h2 id="list-title">Колекція</h2>
+        <div class="cards cards--exhibits">
+          <article class="card card--exhibit" aria-labelledby="e1-title">
+            <img src="images/exhibits/messagepad.jpg" width="640" height="640" alt="Як виглядає Apple MessagePad: чорний кишеньковий комп’ютер із великим сенсорним екраном і написом Newton угорі, поруч — окремий стилус, щоб писати на екрані">
+            <h3 id="e1-title">MessagePad</h3>
+            <dl class="exhibit-facts">
+              <div><dt>Виробник:</dt> <dd>Apple</dd></div>
+              <div><dt>Рік випуску:</dt> <dd>1993</dd></div>
+            </dl>
+            <p>Особистий цифровий помічник на ОС Newton із сенсорним екраном, задовго до появи слова «планшет».</p>
+          </article>
+          <article class="card card--exhibit" aria-labelledby="e2-title">
+            <img src="images/exhibits/magnavox-odyssey.jpg" width="640" height="640" alt="Як виглядає Magnavox Odyssey: біла приставка з чорною кришкою, до якої дротом під’єднано прямокутний контролер із ручками; поруч — кольорова накладка на екран телевізора з ігровим полем і аркуш правил гри">
+            <h3 id="e2-title">Magnavox Odyssey</h3>
+            <dl class="exhibit-facts">
+              <div><dt>Виробник:</dt> <dd>Magnavox</dd></div>
+              <div><dt>Рік випуску:</dt> <dd>1972</dd></div>
+            </dl>
+            <p>Перша консоль, яку можна було під’єднати до телевізора.</p>
+          </article>
+          <article class="card card--exhibit" aria-labelledby="e3-title">
+            <img src="images/exhibits/apple-iigs.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Apple II GS: плаский світло-бежевий системний блок із райдужним логотипом Apple і підписом Стіва Возняка на передній панелі — це лімітована серія">
+            <h3 id="e3-title">Apple II GS</h3>
+            <dl class="exhibit-facts">
+              <div><dt>Виробник:</dt> <dd>Apple</dd></div>
+              <div><dt>Рік випуску:</dt> <dd>1986</dd></div>
+            </dl>
+            <p>Модель із лінійки Apple II, першого серійного комп’ютера компанії.</p>
+          </article>
+          <article class="card card--exhibit" aria-labelledby="e4-title">
+            <img src="images/exhibits/quicktake-100.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Apple QuickTake 100: темно-сіра цифрова камера, формою схожа на бінокль, з об’єктивом і спалахом на передній стінці">
+            <h3 id="e4-title">Apple QuickTake 100</h3>
+            <dl class="exhibit-facts">
+              <div><dt>Виробник:</dt> <dd>Apple разом із Kodak</dd></div>
+              <div><dt>Рік випуску:</dt> <dd>1994</dd></div>
+            </dl>
+            <p>Одна з перших цифрових фотокамер.</p>
+          </article>
+          <article class="card card--exhibit" aria-labelledby="e5-title">
+            <img src="images/exhibits/amiga-600.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Commodore Amiga 600: світло-бежева клавіатура з написом Amiga, усередині якої вміщено весь комп’ютер, без окремого системного блока">
+            <h3 id="e5-title">Commodore Amiga 600</h3>
+            <dl class="exhibit-facts">
+              <div><dt>Виробник:</dt> <dd>Commodore</dd></div>
+              <div><dt>Рік випуску:</dt> <dd>1992</dd></div>
+            </dl>
+            <p>Повноцінний комп’ютер у корпусі клавіатури.</p>
+          </article>
+          <article class="card card--exhibit" aria-labelledby="e6-title">
+            <img src="images/exhibits/famicom.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Nintendo Famicom: біла приставка з бордовими бічними вставками, гніздом для картриджа згори й написом Family Computer спереду">
+            <h3 id="e6-title">Nintendo Famicom</h3>
+            <dl class="exhibit-facts">
+              <div><dt>Виробник:</dt> <dd>Nintendo</dd></div>
+              <div><dt>Рік випуску:</dt> <dd>1983</dd></div>
+            </dl>
+            <p>Оригінал консолі, клоном якої була відома в Україні Dendy.</p>
+          </article>
+        </div>
+        <a class="section-more" href="https://sncmuseum.org/exhibits">Усі експонати на sncmuseum.org</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-blue">
+    <div class="container">
+      <img class="footer-logo" src="images/logo.png" alt="Software and Computer Museum" lang="en" width="70" height="96" loading="lazy">
+      <div class="footer-contacts">
+        <p>Харків, вул. Григорія Сковороди, 79/1</p>
+        <p>Вт–Сб 10:00–18:00</p>
+        <a href="tel:+380675394095">067&nbsp;539&nbsp;4095</a>
+        <a href="https://sncmuseum.org">sncmuseum.org</a>
+      </div>
+      <div class="lang" role="group" aria-label="Мова сайту">
+        <button type="button" aria-pressed="true" aria-label="Українська">UA</button>
+        <button type="button" aria-pressed="false" aria-label="English" lang="en">EN</button>
+      </div>
+      <p class="copyright">© [ЗАПОВНИТИ: рік] <span lang="en">Software and Computer Museum</span></p>
+    </div>
+  </footer>
+</body>
+</html>

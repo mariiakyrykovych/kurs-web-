@@ -1,0 +1,614 @@
+/* Основа */
+:root { --gutter: var(--space-16); }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 28px;
+}
+h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 600; color: var(--ink); }
+p { margin: 0; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--museum-blue); }
+a:hover { color: var(--museum-blue-deep); }
+input::placeholder { color: var(--ink-muted); opacity: 1; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+.on-blue a:focus-visible,
+.on-blue button:focus-visible { outline-color: var(--white); }
+
+.skip {
+  position: absolute;
+  left: var(--space-4);
+  top: -200px;
+  z-index: 30;
+  padding: var(--space-3) var(--space-6);
+  background: var(--white);
+  color: var(--museum-blue);
+  border: 2px solid var(--museum-blue);
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip:focus { top: var(--space-4); }
+
+.container { max-width: 1200px; margin: 0 auto; }
+.muted { color: var(--ink-muted); }
+.todo {
+  padding: var(--space-3) var(--space-4);
+  background: var(--paper);
+  border: 2px dashed var(--museum-grey);
+  border-radius: var(--radius-sm);
+  color: var(--ink-muted);
+  text-align: center;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 var(--space-8);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--motion), box-shadow var(--motion), background-color var(--motion);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); box-shadow: none; }
+
+.btn-primary { background: var(--cta-yellow); border: 2px solid var(--ink); color: var(--ink); }
+.btn-primary:hover { background: var(--cta-yellow-hover); color: var(--ink); box-shadow: var(--shadow-btn-hover); }
+.btn-primary:active { background: var(--cta-yellow-pressed); }
+
+.btn-secondary { background: transparent; border: 2px solid var(--museum-blue); color: var(--museum-blue); }
+.btn-secondary:hover { background: var(--blue-soft); color: var(--museum-blue); box-shadow: var(--shadow-btn-secondary-hover); }
+.btn-secondary:active { background: var(--blue-soft-pressed); }
+
+/* Біла кнопка на синьому тлі (лише в макеті, не в системі) */
+.btn-hero {
+  background: var(--white);
+  border: 2px solid var(--white);
+  box-shadow: var(--shadow-hero-card);
+  color: var(--museum-blue);
+}
+.btn-hero:hover { background: var(--blue-soft); color: var(--museum-blue); box-shadow: 0 10px 28px rgba(10, 14, 30, 0.35); }
+.btn-hero:active { background: var(--blue-soft-pressed); }
+
+/* Перемикач мови */
+.lang {
+  display: flex;
+  border: 2px solid var(--white);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.lang button {
+  min-width: 48px;
+  min-height: 48px;
+  border: 0;
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.lang button[aria-pressed="true"] { background: var(--white); color: var(--museum-blue); }
+.site-footer .lang button[aria-pressed="true"] { color: var(--museum-blue-deep); }
+
+/* Шапка */
+.site-header {
+  padding: var(--space-3) var(--gutter);
+  background: var(--museum-blue);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  justify-content: space-between;
+}
+.logo { width: 47px; height: 64px; }
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-6);
+  font-weight: 600;
+}
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--white);
+  text-decoration: none;
+}
+.site-nav a:hover { color: var(--white); text-decoration: underline; }
+.header-tools { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+.header-phone {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.header-phone:hover { color: var(--white); text-decoration: underline; }
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 var(--space-2);
+  color: var(--white);
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.header-cta:hover { color: var(--white); }
+
+/* Перший екран */
+.hero {
+  padding: var(--space-24) var(--gutter);
+  background: var(--museum-blue);
+  color: var(--white);
+}
+.hero .container { display: flex; flex-wrap: wrap; gap: var(--space-16); align-items: center; }
+.hero-text {
+  flex: 1 1 600px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+.hero h1 {
+  max-width: 760px;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: -0.005em;
+  color: var(--white);
+}
+.hero-lead { max-width: 640px; font-size: 20px; line-height: 32px; }
+.hero .btn-hero {
+  min-width: 320px;
+  min-height: 64px;
+  margin-top: var(--space-4);
+  padding: 0 var(--space-12);
+  font-size: 22px;
+  line-height: 28px;
+}
+.hero-photo {
+  flex: 0 1 400px;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* Секції */
+.section { padding: var(--space-24) var(--gutter); }
+.section--white { background: var(--white); border-top: 1px solid var(--museum-grey); }
+.section--framed { border-bottom: 1px solid var(--museum-grey); }
+.section .container { display: flex; flex-direction: column; gap: var(--space-12); }
+.section h2 { font-size: 40px; line-height: 48px; }
+
+/* Картки */
+.cards { display: grid; gap: var(--space-6); }
+.cards--excursions { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.cards--exhibits { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.cards--courses { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  background: var(--white);
+  border: 1px solid var(--museum-grey);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--motion), box-shadow var(--motion);
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+.card h3 { font-size: 24px; line-height: 32px; }
+.card-body { display: flex; flex-direction: column; gap: var(--space-2); flex-grow: 1; }
+.card .btn { align-self: flex-start; margin-top: var(--space-3); }
+.card--course { background: var(--blue-soft); border: 2px solid var(--museum-blue); }
+
+.card--exhibit { padding: var(--space-6); box-shadow: none; }
+.card--exhibit img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--paper);
+}
+.card--exhibit h3 { margin-top: var(--space-1); }
+.year {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--ink-muted);
+}
+
+.exhibit-facts { display: flex; flex-direction: column; margin: 0; }
+.exhibit-facts dt { display: inline; color: var(--ink-muted); }
+.exhibit-facts dd { display: inline; margin: 0; font-family: var(--font-mono); font-weight: 500; }
+
+/* Запис і відвідування */
+.signup-row { display: flex; flex-wrap: wrap; gap: var(--space-12); align-items: flex-start; }
+.signup { flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-8); }
+.visit { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-6); }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  background: var(--paper);
+  border: 1px solid var(--museum-grey);
+  border-radius: var(--radius-md);
+}
+.field { display: flex; flex-direction: column; gap: var(--space-2); }
+.field label { font-weight: 600; }
+.field label span { font-weight: 400; color: var(--ink-muted); }
+.field input,
+.field select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 var(--space-3);
+  background: var(--white);
+  border: 1px solid var(--museum-grey);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 18px;
+}
+.field [aria-invalid="true"] { border: 2px solid var(--danger); }
+.field-error { color: var(--danger); font-weight: 600; }
+.form .todo { text-align: left; }
+.form .btn {
+  align-self: flex-start;
+  min-height: 52px;
+  background: var(--white);
+}
+.thanks {
+  padding: var(--space-8);
+  background: var(--blue-soft);
+  border: 2px solid var(--museum-blue);
+  border-radius: var(--radius-md);
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.visit-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-6);
+  background: var(--blue-soft);
+  border: 1px solid var(--museum-grey);
+  border-radius: var(--radius-md);
+  font-size: 20px;
+  line-height: 32px;
+}
+.visit-info dt { display: inline; font-weight: 600; }
+.visit-info dd { display: inline; margin: 0; }
+.map-todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+/* Підвал */
+.site-footer {
+  padding: var(--space-12) var(--gutter);
+  background: var(--museum-blue-deep);
+  color: var(--white);
+}
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo { width: 70px; height: 96px; }
+.footer-contacts { display: flex; flex-direction: column; gap: var(--space-1); }
+.footer-contacts a { color: var(--white); font-weight: 600; }
+.footer-contacts a:hover { color: var(--white); }
+.copyright { font-size: 16px; line-height: 24px; }
+
+.section-more { align-self: flex-start; font-weight: 600; }
+
+/* Сторінка курсів */
+.logo-link { display: block; border-radius: var(--radius-sm); }
+.site-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 8px; }
+
+.hero--courses .container { align-items: stretch; }
+.hero-lead a { color: var(--white); font-weight: 600; white-space: nowrap; }
+.hero-lead a:hover { color: var(--white); }
+.kicker {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.kicker::before { content: "> "; }
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.facts li {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  padding: var(--space-4) var(--space-6);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-md);
+}
+.facts-value { font-family: var(--font-display); font-weight: 600; font-size: 32px; line-height: 40px; }
+.facts-label { font-size: 16px; line-height: 24px; }
+
+.audience {
+  flex: 0 1 360px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-hero-card);
+  color: var(--ink);
+}
+.audience-title { font-family: var(--font-display); font-weight: 600; font-size: 22px; line-height: 30px; margin-bottom: var(--space-2); }
+.audience a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 56px;
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid var(--museum-blue);
+  border-radius: var(--radius-pill);
+  color: var(--museum-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--motion), transform var(--motion);
+}
+.audience a:hover { background: var(--blue-soft); transform: translateX(4px); }
+.audience a:focus-visible { outline-color: var(--museum-blue); }
+.audience-age {
+  min-width: 72px;
+  padding: var(--space-1) var(--space-2);
+  background: var(--museum-blue);
+  border-radius: var(--radius-pill);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.course-list { display: flex; flex-direction: column; gap: var(--space-8); }
+.course {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: var(--space-12);
+  padding: var(--space-12);
+  background: var(--white);
+  border: 2px solid var(--museum-blue);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  scroll-margin-top: var(--space-6);
+  transition: transform var(--motion), box-shadow var(--motion);
+}
+.course:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+.course:target { box-shadow: 0 0 0 4px var(--blue-soft-pressed), var(--shadow-card-hover); }
+.course-main { display: flex; flex-direction: column; gap: var(--space-4); align-items: flex-start; }
+.course-main h3 { font-size: 30px; line-height: 38px; }
+.course-tag {
+  padding: var(--space-1) var(--space-3);
+  background: var(--blue-soft);
+  border-radius: var(--radius-pill);
+  color: var(--museum-blue-deep);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.course-actions { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-6); align-items: center; margin-top: auto; padding-top: var(--space-4); }
+.course-phone { display: inline-flex; align-items: center; min-height: 48px; font-weight: 600; }
+.course-facts {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: var(--space-6);
+  background: var(--paper);
+  border-radius: var(--radius-md);
+}
+.course-facts div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  border-bottom: 1px dashed var(--museum-grey);
+}
+.course-facts div:last-child { border-bottom: 0; }
+.course-facts dt { color: var(--ink-muted); }
+.course-facts dd { margin: 0; font-weight: 600; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.steps li {
+  counter-increment: step;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  background: var(--paper);
+  border: 1px solid var(--museum-grey);
+  border-radius: var(--radius-md);
+}
+.steps li::before {
+  content: "0" counter(step);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--museum-blue);
+}
+.steps h3 { font-size: 24px; line-height: 32px; }
+
+.news { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+.news li {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: var(--space-6);
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--museum-grey);
+}
+.news li:last-child { border-bottom: 1px solid var(--museum-grey); }
+
+.cta-section { background: var(--museum-blue); color: var(--white); }
+.cta-section .container { align-items: flex-start; gap: var(--space-6); }
+.cta-section h2 { color: var(--white); }
+
+/* Панель запису на телефоні */
+.mobile-bar { display: none; }
+
+/* Планшет */
+@media (max-width: 1024px) {
+  :root { --gutter: var(--space-8); }
+}
+
+/* Смартфон */
+@media (max-width: 768px) {
+  :root { --gutter: var(--space-4); }
+
+  .site-header { padding-bottom: var(--space-1); }
+  .site-header .container { gap: var(--space-2); }
+  .logo { width: 41px; height: 56px; order: 1; }
+  .header-tools { order: 2; }
+  .header-cta { display: none; }
+  .site-nav { order: 3; flex-basis: 100%; }
+
+  .hero { padding: 40px var(--gutter) var(--space-16); }
+  .hero .container { flex-direction: column; align-items: stretch; gap: var(--space-6); }
+  .hero-text { flex: none; align-items: stretch; }
+  .hero h1 { font-size: 34px; line-height: 42px; }
+  .hero .btn-hero {
+    min-width: 0;
+    min-height: 60px;
+    margin-top: var(--space-2);
+    padding: 0 var(--space-6);
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .hero-photo { flex: none; width: 100%; margin-top: var(--space-6); }
+
+  .section { padding: var(--space-16) var(--gutter); }
+  .section .container { gap: var(--space-8); }
+  .section h2 { font-size: 28px; line-height: 36px; }
+  .cards { grid-template-columns: minmax(0, 1fr); }
+  .card { padding: var(--space-6); }
+  .card h3 { font-size: 22px; line-height: 30px; }
+  .card .btn { align-self: stretch; margin-top: var(--space-2); padding: 0 var(--space-6); }
+
+  .signup-row { flex-direction: column; align-items: stretch; gap: var(--space-16); }
+  .signup, .visit { flex: none; }
+  .form { padding: var(--space-6); }
+  .form .btn { align-self: stretch; }
+  .thanks { padding: var(--space-6); }
+  .map-todo { height: 220px; }
+
+  .facts { gap: var(--space-3); }
+  .facts li { flex: 1 1 140px; min-width: 0; padding: var(--space-3) var(--space-4); }
+  .facts-value { font-size: 26px; line-height: 34px; }
+  .audience { flex: none; padding: var(--space-6); }
+  .course { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); padding: var(--space-6); }
+  .course-main h3 { font-size: 24px; line-height: 32px; }
+  .course-actions { flex-direction: column; align-items: stretch; }
+  .course-actions .btn { padding: 0 var(--space-6); }
+  .course-facts { padding: var(--space-4); }
+  .steps li { padding: var(--space-6); }
+  .news li { grid-template-columns: minmax(0, 1fr); gap: var(--space-1); }
+  .cta-section .container { align-items: stretch; }
+
+  .site-footer:has(~ .mobile-bar) { padding-bottom: 112px; }
+  .site-footer .container { flex-direction: column; align-items: flex-start; }
+  .footer-logo { width: 59px; height: 80px; }
+  .footer-contacts a { display: inline-flex; align-items: center; min-height: 48px; }
+
+  .mobile-bar {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    padding: var(--space-3) var(--gutter);
+    background: var(--museum-blue);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 -6px 16px rgba(10, 14, 30, 0.25);
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 200ms, opacity 200ms, visibility 200ms;
+  }
+  .mobile-bar.is-visible { transform: none; opacity: 1; visibility: visible; }
+  .mobile-bar .btn-hero {
+    display: flex;
+    min-height: 56px;
+    padding: 0 var(--space-6);
+    box-shadow: none;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  html { scroll-padding-bottom: 96px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .btn:hover, .btn:active, .card:hover, .course:hover, .audience a:hover { transform: none; }
+}

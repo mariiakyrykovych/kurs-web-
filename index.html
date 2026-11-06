@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software and Computer Museum — екскурсії, експонати й курси</title>
+  <meta name="description" content="Історія комп’ютерів у Харкові: екскурсії, експонати й курси для дітей і дорослих.">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Literata:opsz,wght@7..72,400;7..72,600&family=Rubik:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">Перейти до вмісту</a>
+
+  <header class="site-header on-blue">
+    <div class="container">
+      <img class="logo" src="images/logo.png" alt="Software and Computer Museum" lang="en" width="47" height="64">
+      <nav class="site-nav" aria-label="Розділи сторінки">
+        <a href="#excursions">Екскурсії</a>
+        <a href="exhibits.html">Експонати</a>
+        <a href="#courses">Курси</a>
+        <a href="#contacts">Відвідування</a>
+      </nav>
+      <div class="header-tools">
+        <div class="lang" role="group" aria-label="Мова сайту">
+          <button type="button" aria-pressed="true" aria-label="Українська">UA</button>
+          <button type="button" aria-pressed="false" aria-label="English" lang="en">EN</button>
+        </div>
+        <a class="header-phone" href="tel:+380675394095" aria-label="Зателефонувати: 067 539 4095">067&nbsp;539&nbsp;4095</a>
+        <a class="header-cta" href="#signup">Записатися на екскурсію чи курс</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero on-blue" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-text">
+          <h1 id="hero-title">Історія комп’ютерів у Харкові: від ПК «Пошук» до ігрових приставок 90-х</h1>
+          <p class="hero-lead">Екскурсії, експонати й курси для дітей і дорослих.</p>
+          <a class="btn btn-hero" href="#signup">Записатися на екскурсію</a>
+        </div>
+        <img class="hero-photo" src="images/hero.jpg" width="1280" height="960" alt="Зал музею, у якому експонати розставлено за роками: уздовж стіни — скляні вітрини з комп’ютерами 1990-х і 2000-х, зокрема настільними Apple iMac, на тумбах жовті позначки 2000, 1980 і 1970 років, на сірих стінах — полиці з кишеньковими пристроями й плакати з історії техніки">
+      </div>
+    </section>
+
+    <section id="excursions" class="section" aria-labelledby="excursions-title">
+      <div class="container">
+        <h2 id="excursions-title">Екскурсії</h2>
+        <div class="cards cards--excursions">
+          <article class="card">
+            <h3>Оглядова екскурсія</h3>
+            <div class="card-body">
+              <p>Для всіх, хто вперше в музеї.</p>
+              <p>Тривалість: <span class="muted">[ЗАПОВНИТИ]</span></p>
+              <p>Ціна: <span class="muted">[ЗАПОВНИТИ]</span></p>
+            </div>
+            <a class="btn btn-secondary" href="#signup" data-direction="exc1" aria-label="Записатися на екскурсію: оглядова">Записатися на екскурсію</a>
+          </article>
+          <article class="card">
+            <h3>Шкільна екскурсія</h3>
+            <div class="card-body">
+              <p>Для класів. Бронюйте заздалегідь.</p>
+              <p>Тривалість: <span class="muted">[ЗАПОВНИТИ]</span></p>
+              <p>Ціна: <span class="muted">[ЗАПОВНИТИ]</span></p>
+            </div>
+            <a class="btn btn-secondary" href="#signup" data-direction="exc2" aria-label="Записатися на екскурсію: шкільна">Записатися на екскурсію</a>
+          </article>
+          <article class="card">
+            <h3>Тематична екскурсія</h3>
+            <div class="card-body">
+              <p>Для тих, хто хоче глибше розібратися в одній темі.</p>
+              <p>Тривалість: <span class="muted">[ЗАПОВНИТИ]</span></p>
+              <p>Ціна: <span class="muted">[ЗАПОВНИТИ]</span></p>
+            </div>
+            <a class="btn btn-secondary" href="#signup" data-direction="exc3" aria-label="Записатися на екскурсію: тематична">Записатися на екскурсію</a>
+          </article>
+          <article class="card">
+            <h3>Сімейна екскурсія «Ігрові приставки 90-х»</h3>
+            <div class="card-body">
+              <p>Для батьків із дітьми.</p>
+              <p>Тривалість: <span class="muted">[ЗАПОВНИТИ]</span></p>
+              <p>Ціна: <span class="muted">[ЗАПОВНИТИ]</span></p>
+            </div>
+            <a class="btn btn-secondary" href="#signup" data-direction="exc4" aria-label="Записатися на екскурсію: сімейна «Ігрові приставки 90-х»">Записатися на екскурсію</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="exhibits" class="section section--white section--framed" aria-labelledby="exhibits-title">
+      <div class="container">
+        <h2 id="exhibits-title">Експонати</h2>
+        <div class="cards cards--exhibits">
+          <article class="card card--exhibit">
+            <img src="images/exhibits/messagepad.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Apple MessagePad: чорний кишеньковий комп’ютер із великим сенсорним екраном і написом Newton угорі, поруч — окремий стилус, щоб писати на екрані">
+            <h3>MessagePad</h3>
+            <p class="year">Apple · 1993</p>
+            <p>Особистий цифровий помічник на ОС Newton із сенсорним екраном, задовго до появи слова «планшет».</p>
+          </article>
+          <article class="card card--exhibit">
+            <img src="images/exhibits/magnavox-odyssey.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Magnavox Odyssey: біла приставка з чорною кришкою, до якої дротом під’єднано прямокутний контролер із ручками; поруч — кольорова накладка на екран телевізора з ігровим полем і аркуш правил гри">
+            <h3>Magnavox Odyssey</h3>
+            <p class="year">Magnavox · 1972</p>
+            <p>Перша консоль, яку можна було під’єднати до телевізора.</p>
+          </article>
+          <article class="card card--exhibit">
+            <img src="images/exhibits/apple-iigs.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Apple II GS: плаский світло-бежевий системний блок із райдужним логотипом Apple і підписом Стіва Возняка на передній панелі — це лімітована серія">
+            <h3>Apple II GS</h3>
+            <p class="year">Apple · 1986</p>
+            <p>Модель із лінійки Apple II, першого серійного комп’ютера компанії.</p>
+          </article>
+          <article class="card card--exhibit">
+            <img src="images/exhibits/quicktake-100.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Apple QuickTake 100: темно-сіра цифрова камера, формою схожа на бінокль, з об’єктивом і спалахом на передній стінці">
+            <h3>Apple QuickTake 100</h3>
+            <p class="year">Apple разом із Kodak · 1994</p>
+            <p>Одна з перших цифрових фотокамер.</p>
+          </article>
+          <article class="card card--exhibit">
+            <img src="images/exhibits/amiga-600.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Commodore Amiga 600: світло-бежева клавіатура з написом Amiga, усередині якої вміщено весь комп’ютер, без окремого системного блока">
+            <h3>Commodore Amiga 600</h3>
+            <p class="year">Commodore · 1992</p>
+            <p>Повноцінний комп’ютер у корпусі клавіатури.</p>
+          </article>
+          <article class="card card--exhibit">
+            <img src="images/exhibits/famicom.jpg" width="640" height="640" loading="lazy" alt="Як виглядає Nintendo Famicom: біла приставка з бордовими бічними вставками, гніздом для картриджа згори й написом Family Computer спереду">
+            <h3>Nintendo Famicom</h3>
+            <p class="year">Nintendo · 1983</p>
+            <p>Оригінал консолі, клоном якої була відома в Україні Dendy.</p>
+          </article>
+        </div>
+        <p class="todo">[Місце для кнопки «Показати більше експонатів» — додається згодом, при розширенні колекції]</p>
+      </div>
+    </section>
+
+    <section id="courses" class="section" aria-labelledby="courses-title">
+      <div class="container">
+        <h2 id="courses-title">Курси</h2>
+        <div class="cards cards--courses">
+          <article class="card card--course">
+            <h3>Усі можливості AI для роботи: реальні завдання та їх розв’язання</h3>
+            <div class="card-body">
+              <p>Для кого: дорослі 30+</p>
+              <p>Формат: офлайн і онлайн</p>
+              <p>Тривалість: приблизно 2–3 місяці, заняття тривалістю 90 хвилин</p>
+              <p>Ціна: безкоштовно</p>
+            </div>
+            <a class="btn btn-primary" href="#signup" data-direction="crs1" aria-label="Записатися на курс «Усі можливості AI для роботи: реальні завдання та їх розв’язання» для дорослих 30+">Записатися на курс</a>
+          </article>
+          <article class="card card--course">
+            <h3>Усі можливості AI для роботи: реальні завдання та їх розв’язання</h3>
+            <div class="card-body">
+              <p>Для кого: підлітки 14–19 років</p>
+              <p>Формат: онлайн</p>
+              <p>Тривалість: 2 місяці, заняття тривалістю 90 хвилин</p>
+              <p>Ціна: безкоштовно</p>
+            </div>
+            <a class="btn btn-primary" href="#signup" data-direction="crs2" aria-label="Записатися на курс «Усі можливості AI для роботи: реальні завдання та їх розв’язання» для підлітків 14–19 років">Записатися на курс</a>
+          </article>
+          <article class="card card--course">
+            <h3>Програмування в Roblox Studio</h3>
+            <div class="card-body">
+              <p>Для кого: діти 10–12 років</p>
+              <p>Формат: онлайн</p>
+              <p>Тривалість: півроку, заняття тривалістю 90 хвилин</p>
+              <p>Ціна: безкоштовно</p>
+            </div>
+            <a class="btn btn-primary" href="#signup" data-direction="crs3" aria-label="Записатися на курс «Програмування в Roblox Studio» для дітей 10–12 років">Записатися на курс</a>
+          </article>
+        </div>
+        <a class="section-more" href="courses.html">Усе про курси</a>
+      </div>
+    </section>
+
+    <section class="section section--white" aria-label="Запис і відвідування">
+      <div class="container">
+        <div class="signup-row">
+          <div id="signup" class="signup">
+            <h2>Запис</h2>
+            <form class="form" id="signup-form" novalidate>
+              <div class="field">
+                <label for="f-direction">Напрям <span>(обов’язково)</span></label>
+                <select id="f-direction" name="direction" required aria-required="true" aria-invalid="false" aria-describedby="err-direction">
+                  <option value="">Оберіть екскурсію або курс</option>
+                  <option value="exc1">Екскурсія — Оглядова екскурсія</option>
+                  <option value="exc2">Екскурсія — Шкільна екскурсія</option>
+                  <option value="exc3">Екскурсія — Тематична екскурсія</option>
+                  <option value="exc4">Екскурсія — Сімейна екскурсія «Ігрові приставки 90-х»</option>
+                  <option value="crs1">Курс — Усі можливості AI для роботи: реальні завдання та їх розв’язання (дорослі 30+)</option>
+                  <option value="crs2">Курс — Усі можливості AI для роботи: реальні завдання та їх розв’язання (підлітки 14–19)</option>
+                  <option value="crs3">Курс — Програмування в Roblox Studio (діти 10–12)</option>
+                </select>
+                <p id="err-direction" class="field-error" role="alert" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-name">Ім’я <span>(обов’язково)</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required aria-required="true" aria-invalid="false" aria-describedby="err-name">
+                <p id="err-name" class="field-error" role="alert" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-phone">Телефон <span>(обов’язково)</span></label>
+                <p id="hint-phone" class="muted">Формат: +380 XX XXX XX XX</p>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+380..." required aria-required="true" aria-invalid="false" aria-describedby="hint-phone err-phone">
+                <p id="err-phone" class="field-error" role="alert" hidden></p>
+              </div>
+              <p class="todo">[ВІДКРИТЕ ПИТАННЯ: чи потрібна згода на обробку персональних даних]</p>
+              <button class="btn btn-secondary" type="submit">Надіслати заявку</button>
+            </form>
+            <p class="thanks" id="signup-thanks" role="status" hidden>Дякуємо! Ми зателефонуємо Вам найближчим часом</p>
+          </div>
+
+          <div id="contacts" class="visit">
+            <h2>Відвідування</h2>
+            <dl class="visit-info">
+              <div><dt>Графік:</dt> <dd>вівторок–субота, 10:00–18:00</dd></div>
+              <div><dt>Адреса:</dt> <dd>Харків, вул. Григорія Сковороди, 79/1</dd></div>
+              <div><dt>Телефон:</dt> <dd><a href="tel:+380675394095">067&nbsp;539&nbsp;4095</a></dd></div>
+            </dl>
+            <div class="todo map-todo" role="img" aria-label="Карта: музей на вул. Григорія Сковороди, 79/1, Харків">[КАРТА — статичне зображення з посиланням «Прокласти маршрут» чи вбудована інтерактивна: рішення відкрите]</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-blue">
+    <div class="container">
+      <img class="footer-logo" src="images/logo.png" alt="Software and Computer Museum" lang="en" width="70" height="96" loading="lazy">
+      <div class="footer-contacts">
+        <p>Харків, вул. Григорія Сковороди, 79/1</p>
+        <p>Вт–Сб 10:00–18:00</p>
+        <a href="tel:+380675394095">067&nbsp;539&nbsp;4095</a>
+        <a href="https://sncmuseum.org">sncmuseum.org</a>
+      </div>
+      <div class="lang" role="group" aria-label="Мова сайту">
+        <button type="button" aria-pressed="true" aria-label="Українська">UA</button>
+        <button type="button" aria-pressed="false" aria-label="English" lang="en">EN</button>
+      </div>
+      <p class="copyright">© [ЗАПОВНИТИ: рік] <span lang="en">Software and Computer Museum</span></p>
+    </div>
+  </footer>
+
+  <div class="mobile-bar on-blue" id="mobile-bar">
+    <a class="btn btn-hero" href="#signup">Записатися на екскурсію</a>
+  </div>
+</body>
+</html>
