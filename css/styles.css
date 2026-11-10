@@ -91,10 +91,10 @@ select:focus-visible {
 }
 .btn-hero:hover { background: var(--blue-soft); color: var(--museum-blue); box-shadow: 0 10px 28px rgba(10, 14, 30, 0.35); }
 .btn-hero:active { background: var(--blue-soft-pressed); }
-/* Другорядна кнопка на синьому тлі: прозора з білою рамкою */
-.btn-hero--outline { background: transparent; box-shadow: none; color: var(--white); }
-.btn-hero--outline:hover { background: rgba(255, 255, 255, 0.12); color: var(--white); }
-.btn-hero--outline:active { background: rgba(255, 255, 255, 0.2); }
+/* Кнопка «Записатися на курс» на синьому тлі: темно-зелена з білою рамкою */
+.btn-hero--course { background: var(--course-green); color: var(--white); }
+.btn-hero--course:hover { background: var(--course-green-hover); color: var(--white); }
+.btn-hero--course:active { background: var(--course-green-pressed); }
 
 /* Перемикач мови */
 .lang {

@@ -14,6 +14,10 @@
   --white: #ffffff;
   --museum-grey: #787f81;
   --danger: #8a1c1c;
+  /* Кнопка «Записатися на курс» на першому екрані (поза tokens.json) */
+  --course-green: #1e6b43;
+  --course-green-hover: #185a38;
+  --course-green-pressed: #12472c;
   --focus-ring: var(--museum-blue);
 
   /* Шрифти */
