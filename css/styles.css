@@ -91,10 +91,6 @@ select:focus-visible {
 }
 .btn-hero:hover { background: var(--blue-soft); color: var(--museum-blue); box-shadow: 0 10px 28px rgba(10, 14, 30, 0.35); }
 .btn-hero:active { background: var(--blue-soft-pressed); }
-/* Кнопка «Записатися на курс» на синьому тлі: темно-зелена з білою рамкою */
-.btn-hero--course { background: var(--course-green); color: var(--white); }
-.btn-hero--course:hover { background: var(--course-green-hover); color: var(--white); }
-.btn-hero--course:active { background: var(--course-green-pressed); }
 
 /* Перемикач мови */
 .lang {
@@ -194,7 +190,6 @@ select:focus-visible {
   color: var(--white);
 }
 .hero-lead { max-width: 640px; font-size: 20px; line-height: 32px; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
 .hero .btn-hero {
   min-width: 320px;
   min-height: 64px;
@@ -203,7 +198,6 @@ select:focus-visible {
   font-size: 22px;
   line-height: 28px;
 }
-.hero-actions .btn-hero { min-width: 0; padding: 0 var(--space-8); }
 .hero-photo {
   flex: 0 1 400px;
   min-width: 0;
@@ -541,7 +535,6 @@ select:focus-visible {
   .hero { padding: 40px var(--gutter) var(--space-16); }
   .hero .container { flex-direction: column; align-items: stretch; gap: var(--space-6); }
   .hero-text { flex: none; align-items: stretch; }
-  .hero-actions { flex-direction: column; gap: var(--space-3); }
   .hero h1 { font-size: 34px; line-height: 42px; }
   .hero .btn-hero {
     min-width: 0;
