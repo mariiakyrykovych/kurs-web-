@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Статті — Software and Computer Museum</title>
+  <meta name="description" content="Статті Software and Computer Museum про історію комп’ютерів: перші комп’ютери України, люди й машини.">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Literata:opsz,wght@7..72,400;7..72,600&family=Rubik:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">Перейти до вмісту</a>
+
+  <header class="site-header on-blue">
+    <div class="container">
+      <a class="logo-link" href="index.html"><img class="logo" src="images/logo.png" alt="Software and Computer Museum — на головну" width="47" height="64"></a>
+      <nav class="site-nav" aria-label="Розділи сайту">
+        <a href="index.html#excursions">Екскурсії</a>
+        <a href="exhibits.html">Експонати</a>
+        <a href="courses.html">Курси</a>
+        <a href="articles.html" aria-current="page">Статті</a>
+        <a href="index.html#contacts">Відвідування</a>
+      </nav>
+      <div class="header-tools">
+        <div class="lang" role="group" aria-label="Мова сайту">
+          <button type="button" aria-pressed="true" aria-label="Українська">UA</button>
+          <button type="button" aria-pressed="false" aria-label="English" lang="en">EN</button>
+        </div>
+        <a class="header-phone" href="tel:+380675394095" aria-label="Зателефонувати: 067 539 4095">067&nbsp;539&nbsp;4095</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero on-blue" aria-labelledby="articles-title">
+      <div class="container">
+        <div class="hero-text">
+          <h1 id="articles-title">Статті</h1>
+          <p class="hero-lead">Розповіді про історію комп’ютерів для всіх, хто цікавиться технікою, без технічного жаргону.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="series-title">
+      <div class="container">
+        <h2 id="series-title">Перші комп’ютери України</h2>
+        <ol class="article-list">
+          <li class="card article-card">
+            <p class="year">Стаття 1</p>
+            <h3><a href="articles/01-mesm.html">Комп’ютер у Феофанії: як у Києві запрацювала МЕОМ</a></h3>
+            <p>Як 1951 року під Києвом невелика команда Сергія Лебедєва запустила першу в СРСР і континентальній Європі електронну обчислювальну машину з програмою, що зберігається в пам’яті.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-blue">
+    <div class="container">
+      <img class="footer-logo" src="images/logo.png" alt="Software and Computer Museum" lang="en" width="70" height="96" loading="lazy">
+      <div class="footer-contacts">
+        <p>Харків, вул. Григорія Сковороди, 79/1</p>
+        <p>Вт–Сб 10:00–18:00</p>
+        <a href="tel:+380675394095">067&nbsp;539&nbsp;4095</a>
+        <a href="https://sncmuseum.org">sncmuseum.org</a>
+      </div>
+      <div class="lang" role="group" aria-label="Мова сайту">
+        <button type="button" aria-pressed="true" aria-label="Українська">UA</button>
+        <button type="button" aria-pressed="false" aria-label="English" lang="en">EN</button>
+      </div>
+      <p class="copyright">© [ЗАПОВНИТИ: рік] <span lang="en">Software and Computer Museum</span></p>
+    </div>
+  </footer>
+</body>
+</html>

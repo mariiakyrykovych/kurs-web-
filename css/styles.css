@@ -513,6 +513,39 @@ select:focus-visible {
 .cta-section .container { align-items: flex-start; gap: var(--space-6); }
 .cta-section h2 { color: var(--white); }
 
+/* Статті */
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.article-card { position: relative; }
+.article-card h3 a { color: var(--ink); text-decoration: none; }
+.article-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius-md); }
+.article-card:hover h3 a { color: var(--museum-blue); text-decoration: underline; }
+.article-card h3 a:focus-visible { outline: none; }
+.article-card:has(a:focus-visible) { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+
+.hero--article h1 { font-size: 48px; line-height: 56px; }
+.back-link { text-decoration: underline; text-underline-offset: 4px; }
+
+.prose { max-width: 720px; display: flex; flex-direction: column; gap: var(--space-6); }
+.prose h2 { margin-top: var(--space-6); font-size: 32px; line-height: 40px; }
+.prose-lead { font-size: 22px; line-height: 34px; }
+.prose strong { font-weight: 600; }
+.prose-next {
+  padding: var(--space-6);
+  background: var(--blue-soft);
+  border-left: 4px solid var(--museum-blue);
+  border-radius: var(--radius-sm);
+  font-style: italic;
+}
+.sources { margin: 0; padding-left: var(--space-6); display: flex; flex-direction: column; gap: var(--space-2); font-size: 16px; line-height: 24px; }
+.sources a { overflow-wrap: anywhere; }
+
 /* Панель запису на телефоні */
 .mobile-bar { display: none; }
 
@@ -572,6 +605,10 @@ select:focus-visible {
   .course-facts { padding: var(--space-4); }
   .steps li { padding: var(--space-6); }
   .news li { grid-template-columns: minmax(0, 1fr); gap: var(--space-1); }
+  .article-list { grid-template-columns: minmax(0, 1fr); }
+  .hero--article h1 { font-size: 30px; line-height: 38px; }
+  .prose h2 { font-size: 26px; line-height: 34px; }
+  .prose-lead { font-size: 20px; line-height: 30px; }
   .cta-section .container { align-items: stretch; }
 
   .site-footer:has(~ .mobile-bar) { padding-bottom: 112px; }
