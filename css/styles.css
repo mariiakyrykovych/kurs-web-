@@ -218,6 +218,9 @@ select:focus-visible {
 .cards--excursions { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .cards--exhibits { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 .cards--courses { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.cards--news { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.about-text { max-width: 70ch; display: flex; flex-direction: column; gap: var(--space-4); }
+.about-text p { margin: 0; }
 .card {
   display: flex;
   flex-direction: column;
