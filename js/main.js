@@ -7,8 +7,13 @@
   var fields = {
     direction: { input: form.elements.direction, error: document.getElementById('err-direction'), text: 'Оберіть екскурсію або курс.' },
     name: { input: form.elements.name, error: document.getElementById('err-name'), text: 'Вкажіть ім’я.' },
-    phone: { input: form.elements.phone, error: document.getElementById('err-phone'), text: 'Вкажіть номер телефону.' }
+    phone: { input: form.elements.phone, error: document.getElementById('err-phone'), text: 'Вкажіть номер телефону.' },
+    consent: { input: form.elements.consent, error: document.getElementById('err-consent'), text: 'Щоб надіслати заявку, дайте згоду на обробку персональних даних.' }
   };
+
+  function isEmpty(input) {
+    return input.type === 'checkbox' ? !input.checked : !input.value.trim();
+  }
 
   function setError(field, message) {
     field.input.setAttribute('aria-invalid', message ? 'true' : 'false');
@@ -43,7 +48,7 @@
     var firstInvalid = null;
     Object.keys(fields).forEach(function (key) {
       var field = fields[key];
-      var empty = !field.input.value.trim();
+      var empty = isEmpty(field.input);
       setError(field, empty ? field.text : '');
       if (empty && !firstInvalid) firstInvalid = field.input;
     });

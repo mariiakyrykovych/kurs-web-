@@ -30,7 +30,6 @@
           <button type="button" aria-pressed="true" aria-label="Українська">UA</button>
           <button type="button" aria-pressed="false" aria-label="English" lang="en">EN</button>
         </div>
-        <a class="header-phone" href="tel:+380675394095" aria-label="Зателефонувати: 067 539 4095">067&nbsp;539&nbsp;4095</a>
         <a class="header-cta" href="#signup">Записатися на екскурсію чи курс</a>
       </div>
     </div>
@@ -212,7 +211,7 @@
         <div class="signup-row">
           <div id="signup" class="signup">
             <h2>Запис</h2>
-            <form class="form" id="signup-form" novalidate>
+            <form class="form" id="signup-form" method="post" novalidate>
               <div class="field">
                 <label for="f-direction">Напрям <span>(обов’язково)</span></label>
                 <select id="f-direction" name="direction" required aria-required="true" aria-invalid="false" aria-describedby="err-direction">
@@ -238,7 +237,13 @@
                 <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+380..." required aria-required="true" aria-invalid="false" aria-describedby="hint-phone err-phone">
                 <p id="err-phone" class="field-error" role="alert" hidden></p>
               </div>
-              <p class="todo">[ВІДКРИТЕ ПИТАННЯ: чи потрібна згода на обробку персональних даних]</p>
+              <div class="field field--consent">
+                <div class="consent">
+                  <input id="f-consent" name="consent" type="checkbox" required aria-required="true" aria-invalid="false" aria-describedby="err-consent">
+                  <label for="f-consent">Погоджуюся на обробку моїх персональних даних (ім’я та телефон), щоб музей зв’язався зі мною щодо запису <span>(обов’язково)</span></label>
+                </div>
+                <p id="err-consent" class="field-error" role="alert" hidden></p>
+              </div>
               <button class="btn btn-secondary" type="submit">Надіслати заявку</button>
             </form>
             <p class="thanks" id="signup-thanks" role="status" hidden>Дякуємо! Ми зателефонуємо Вам найближчим часом</p>

@@ -144,16 +144,6 @@ select:focus-visible {
 }
 .site-nav a:hover { color: var(--white); text-decoration: underline; }
 .header-tools { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
-.header-phone {
-  display: inline-flex;
-  align-items: center;
-  min-height: 48px;
-  color: var(--white);
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.header-phone:hover { color: var(--white); text-decoration: underline; }
 .header-cta {
   display: inline-flex;
   align-items: center;
@@ -290,7 +280,18 @@ select:focus-visible {
 }
 .field [aria-invalid="true"] { border: 2px solid var(--danger); }
 .field-error { color: var(--danger); font-weight: 600; }
-.form .todo { text-align: left; }
+.consent { display: flex; align-items: flex-start; gap: var(--space-3); }
+.field .consent input {
+  flex: none;
+  width: 24px;
+  min-height: 0;
+  height: 24px;
+  margin: 2px 0 0;
+  padding: 0;
+  accent-color: var(--museum-blue);
+}
+.field .consent label { font-weight: 400; }
+.field .consent [aria-invalid="true"] { outline: 2px solid var(--danger); outline-offset: 2px; }
 .form .btn {
   align-self: flex-start;
   min-height: 52px;
