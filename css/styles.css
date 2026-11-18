@@ -528,6 +528,72 @@ select:focus-visible {
 .cta-section .container { align-items: flex-start; gap: var(--space-6); }
 .cta-section h2 { color: var(--white); }
 
+/* Статті */
+.site-nav a[aria-current="true"] { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 8px; }
+
+.cards--articles {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cards--articles > li { display: flex; }
+.card--article { position: relative; flex: 1; }
+.card--article h3 a { color: var(--ink); text-decoration: none; }
+.card--article h3 a::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius-md); }
+.card--article:hover h3 a { color: var(--museum-blue); text-decoration: underline; text-underline-offset: 4px; }
+.card--article:focus-within { box-shadow: 0 0 0 3px var(--focus-ring), var(--shadow-card-hover); }
+.card--article h3 a:focus-visible { outline: none; }
+
+.hero--article { padding-top: var(--space-16); padding-bottom: var(--space-16); }
+.hero--article .hero-text { gap: var(--space-4); }
+.hero--article h1 { max-width: 900px; font-size: 48px; line-height: 56px; }
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--white);
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+.back-link::before { content: "← "; white-space: pre; }
+.back-link:hover { color: var(--white); }
+
+.article { display: flex; flex-direction: column; gap: var(--space-12); }
+.article-body { max-width: 70ch; display: flex; flex-direction: column; gap: var(--space-4); }
+.article-body h2 { margin-top: var(--space-6); font-size: 30px; line-height: 38px; }
+.article-body ul,
+.article-body ol { margin: 0; padding-left: var(--space-6); display: flex; flex-direction: column; gap: var(--space-2); }
+.article-sources {
+  max-width: 70ch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  background: var(--paper);
+  border: 1px solid var(--museum-grey);
+  border-radius: var(--radius-md);
+}
+.section .article-sources h2 { font-size: 24px; line-height: 32px; }
+.article-sources ul { margin: 0; padding-left: var(--space-6); display: flex; flex-direction: column; gap: var(--space-2); font-size: 16px; line-height: 24px; }
+
+.article-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6); max-width: 70ch; }
+.article-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-6);
+  border: 2px solid var(--museum-blue);
+  border-radius: var(--radius-md);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color var(--motion), transform var(--motion);
+}
+.article-nav-link:hover { background: var(--blue-soft); color: var(--ink); transform: translateY(-2px); }
+.article-nav-link--next { grid-column: -2; text-align: right; }
+.article-nav-label { color: var(--museum-blue); font-family: var(--font-mono); font-weight: 500; font-size: 16px; line-height: 24px; }
+.article-nav-title { font-weight: 600; }
+
 /* Панель запису на телефоні */
 .mobile-bar { display: none; }
 
@@ -589,6 +655,13 @@ select:focus-visible {
   .news li { grid-template-columns: minmax(0, 1fr); gap: var(--space-1); }
   .cta-section .container { align-items: stretch; }
 
+  .hero--article { padding-top: 40px; padding-bottom: var(--space-12); }
+  .hero--article h1 { font-size: 30px; line-height: 38px; }
+  .article-body h2 { font-size: 24px; line-height: 32px; }
+  .article-sources { padding: var(--space-6); }
+  .article-nav { grid-template-columns: minmax(0, 1fr); }
+  .article-nav-link--next { grid-column: auto; text-align: left; }
+
   .site-footer:has(~ .mobile-bar) { padding-bottom: 112px; }
   .site-footer .container { flex-direction: column; align-items: flex-start; }
   .footer-logo { width: 59px; height: 80px; }
@@ -625,5 +698,5 @@ select:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
-  .btn:hover, .btn:active, .card:hover, .course:hover, .audience a:hover { transform: none; }
+  .btn:hover, .btn:active, .card:hover, .course:hover, .audience a:hover, .article-nav-link:hover { transform: none; }
 }
