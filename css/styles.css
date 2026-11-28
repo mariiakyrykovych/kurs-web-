@@ -196,6 +196,58 @@ select:focus-visible {
   border-radius: var(--radius-md);
 }
 
+/* Блок «Музей відкритий» під першим екраном.
+   Анімація лише на CSS. Рядки з'являються по черзі, квадрати плавно змінюють колір
+   і зупиняються на сталому візерунку. Усе закінчується менш ніж за 5 секунд, без повторів і миготіння. */
+.open-banner {
+  padding: var(--space-12) var(--gutter);
+  background: var(--white);
+  border-bottom: 1px solid var(--museum-grey);
+}
+.open-banner .container { display: flex; align-items: center; gap: var(--space-8); }
+.open-pixels {
+  flex: none;
+  display: grid;
+  grid-template-columns: repeat(3, 24px);
+  grid-auto-rows: 24px;
+  gap: var(--space-1);
+}
+.open-pixels span {
+  border-radius: 2px;
+  background: var(--px);
+  animation: open-pixel 3.2s ease-in-out both;
+  animation-delay: calc(var(--i) * 150ms);
+}
+.open-text { display: flex; flex-direction: column; gap: var(--space-1); }
+.open-banner h2 { font-size: 32px; line-height: 40px; }
+.open-hours {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--museum-blue-deep);
+}
+.open-free { font-weight: 600; }
+.nowrap { white-space: nowrap; }
+.open-line {
+  animation: open-line-in 600ms ease-out both;
+  animation-delay: calc(300ms + var(--line) * 350ms);
+}
+/* Поки блок не видно на екрані, анімація чекає (атрибут ставить js/main.js) */
+.open-banner[data-wait] .open-line,
+.open-banner[data-wait] .open-pixels span { animation-play-state: paused; }
+
+@keyframes open-line-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes open-pixel {
+  0% { background: var(--blue-soft); }
+  40% { background: var(--museum-blue); }
+  70% { background: var(--cta-yellow); }
+  100% { background: var(--px); }
+}
+
 /* Секції */
 .section { padding: var(--space-24) var(--gutter); }
 .section--white { background: var(--white); border-top: 1px solid var(--museum-grey); }
@@ -627,6 +679,12 @@ select:focus-visible {
   }
   .hero-photo { flex: none; width: 100%; margin-top: var(--space-6); }
 
+  .open-banner { padding: var(--space-8) var(--gutter); }
+  .open-banner .container { gap: var(--space-6); }
+  .open-pixels { grid-template-columns: repeat(3, 18px); grid-auto-rows: 18px; }
+  .open-banner h2 { font-size: 26px; line-height: 34px; }
+  .open-hours { font-size: 18px; line-height: 26px; }
+
   .section { padding: var(--space-16) var(--gutter); }
   .section .container { gap: var(--space-8); }
   .section h2 { font-size: 28px; line-height: 36px; }
@@ -699,4 +757,7 @@ select:focus-visible {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .btn:hover, .btn:active, .card:hover, .course:hover, .audience a:hover, .article-nav-link:hover { transform: none; }
+  /* «Музей відкритий»: без анімації, текст і кінцевий візерунок квадратів видно одразу */
+  .open-line { animation: none !important; opacity: 1; transform: none; }
+  .open-pixels span { animation: none !important; background: var(--px); }
 }

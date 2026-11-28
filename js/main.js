@@ -78,6 +78,23 @@
   });
 })();
 
+// Блок «Музей відкритий»: CSS-анімація стартує, коли блок з'являється на екрані.
+// Без JS або без IntersectionObserver анімація просто програється одразу.
+(function () {
+  var banner = document.querySelector('.open-banner');
+  if (!banner || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  banner.setAttribute('data-wait', '');
+  var observer = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) {
+      banner.removeAttribute('data-wait');
+      observer.disconnect();
+    }
+  }, { threshold: 0.4 });
+  observer.observe(banner);
+})();
+
 // Панель «Записатися на екскурсію» на телефоні з'являється після першого екрана
 (function () {
   var bar = document.getElementById('mobile-bar');
